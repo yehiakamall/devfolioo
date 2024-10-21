@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    background-color: #f5f5f5;
+}
+
+.navbar{
+    background-color: #040404;
+  
+}
+
+/* the .underline-effect  */
+.underline-left {
+    position: relative;
+    display: inline-block;
+}
+.underline-left::after {
+    content: '';
+    margin-top: 4px;
+    position: absolute;
+    width: 60%;
+    height: 2px; 
+    bottom: 0;
+    top: 75%;
+    left: 10%;
+    background-color: #fff; /* Color of the underline */
+    transform: scaleX(0); /* Start the animation from 0 (hidden) */
+    transform-origin: left; /* Animate from left to right */
+    transition: transform 0.4s ease-in-out; /* Duration of the animation */
+}
+
+.underline-left:hover::after {
+    transform: scaleX(1); /* Show the underline */
+}
+/* start header section  */
+
+.header-{
+    background-image: linear-gradient(to top, rgba(0,0,0,0.6)50%, rgba(0,0,0,0.6)50%),url(../images/hero-bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content{
+    color: #fff;
+    
+}
+.content h2{
+    color: #fff;
+    font-size: 70px;
+    
+}
+
+.text-container {
+    font-size: 2rem;
+    font-weight: bold;
+    border-right: 2px solid black; /* Create cursor effect */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide text until it's typed */
+    margin-left: 40%;
+}
+
+@keyframes blinkCursor {
+    0% { border-right-color: black; }
+    50% { border-right-color: transparent; }
+    100% { border-right-color: black; }
+}
+
+.text-container {
+    animation: blinkCursor 0.75s step-end infinite; /* Blinking cursor */
+}
+@media (max-width:768px) {
+    .content h2{
+        font-size: 40px;
+    }
+}
+/* END header section  */
+
+/* start About me section  */
+.about-me {
+    margin-top: 100px;
+}
+.caption-me h2 {
+    margin-bottom: px;
+    line-height: 32px;
+
+}
+.caption-me h2 span{
+    color: #716f71;
+}
+ 
+.skill-container {
+    width: 100%;
+    /* max-width: 500px; */
+    margin: 20px auto;
+  }
+  
+.skill {
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .progress {
+    background-color: #d3d3d3;
+    /* border-radius: 20px; */
+    height: 10px;
+    width: 100%;
+  }
+  
+.progress-bar {
+    height: 80%;
+    /* border-radius: 20px; */
+    background-color: #007bff;
+  }
+.progress-bar.html {
+    width: 85%;
+  }
+  
+.progress-bar.css {
+    width: 75%;
+  }
+  
+.progress-bar.php {
+    width: 50%;
+  }
+  
+.progress-bar.js {
+    width: 90%;
+  } 
+  
+.about-content hr{
+    width: 15%;
+    border: #007bff solid 2px;
+  }
+
+
+
+
+
+
+
+
+  
+  .circle-icon {
+    font-size: 50px;
+    color: #007bff;
+    border: 8px solid #007bff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease, color 0.5s ease; /* Add transition for smooth effect */
+  }
+  
+  .abt-card {
+    border-radius: 15px;
+  }
+  
+  .card:hover .circle-icon {
+    background-color: #007bff;
+    color: #fff;
+    border:8px solid #fffbff7c ;
+  }
+  
+
+/* END About me section  */
+
+
+
+.works{
+  background-image: linear-gradient(to top, rgba(0, 148, 254, 0.737)50%, rgba(0, 148, 254, 0.737)50%),url(../images/counters-bg.jpg);
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* start works completed section  */
+
+  
+.works .circle-icon {
+  font-size: 50px;
+  color: #fff;
+  border: 8px solid #cde1f8;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+@media (max-width:768px) {
+  .works{
+    background-image: linear-gradient(to top, rgba(0, 148, 254, 0.737)50%, rgba(0, 148, 254, 0.737)50%),url(../images/counters-bg.jpg);
+    height: 15%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+}
+/* end works completed section  */
+/* start Portfolio section */
+.plus{
+  margin-top: 30px;
+  font-size: 26px;
+  color: #007bff;
+}
+span{
+  color: #007bff;
+}
+
+
+.card .image-{
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.card-:hover  .image-{
+  transform: scale(1.1); /* Zoom the image by 10% */
+}
+
+/* end Portfolio section */
+/* start feedback section  */
+.feedback-{
+  background-image: linear-gradient(to top, rgba(0, 148, 254, 0.737)50%, rgba(0, 148, 254, 0.737)50%),url(../images/overlay-bg.jpg);
+  height: 70vh; 
+  background-position: center;
+  background-size: cover; 
+  position: relative;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+/* end feedback section  */
+.footer{
+  background-image: linear-gradient(to top, rgba(0, 148, 254, 0.737)50%, rgba(0, 148, 254, 0.737)50%),url(../images/overlay-bg.jpg);
+  /* height: 70vh;  */
+  background-position: center;
+  background-size: cover; 
+  position: relative;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.footer .footer- hr{
+  border: #1100ff 2px solid;
+  width: 15%;
+}
+.footer .footer- input{
+    margin-top: 30px;
+    padding: 10px;
+}
+.footer .footer- textarea{
+    margin-top: 30px;
+    padding: 15px;
+}
+.footer .footer- p{
+    
+    line-height: 40px;
+    padding-left: 15px;
+}
+.icons{
+  margin-left: 10px;
+}
+.icons i{
+  margin-right: 10px;
+  color: #007bff;
+  font-size: 15px;
+}
+.iconss{
+  margin-left: -20px;
+}
+.fa-ul li{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px #1100ff solid;
+  margin-inline: 5px;
+}
+.hr-{
+  width: 80px;
+  border: #007aff 3px solid !important; 
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+
+
+}
+.buttonss{
+  width: 200px;
+  margin-top: 20px;
+}
